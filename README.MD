@@ -1,6 +1,6 @@
 # Launchkey 25, 49, 61 MK2 - Device Parameter Banks not available for VST/Plugins FIX
 
-The thing is that on Ableton Live you can't select any Device Parameter Bank other than the first with third party plugins, and the root of this issue is a bug in Launchkey MK2's MIDI Remote Script. The bug is annoying because the pink lights of the banks glow as available, but you just can't select them, and if you wan't to manually tweak, for example, various Synth parameters, you simply can't more than 8.
+On Ableton Live you can't select any Device Parameter Bank other than the first with third party plugins, and the root of this issue is a bug in Launchkey MK2's MIDI Remote Script. The bug is annoying because the pink lights of the banks glow as available, but you just can't select them, and if you wan't to manually tweak, for example, various Synth parameters, you simply can't more than 8.
 
 After contacting Novation a few months ago and not getting a definitive answer from their end, and taking advantage of the free time offered by the quarantine due to COVID-19, I decided to take action on the matter.
 
@@ -12,7 +12,7 @@ I will share the following steps for easily fixing the bug if it's a functionali
 
 **Steps:**
 
-1. Download modified **"DeviceComponent.py"** here: [https://github.com/flariut/LKMK2\_DeviceComponent\_fix](https://github.com/flariut/LKMK2_DeviceComponent_fix)
+1. Download modified **"DeviceComponent.py"** from this repository
 2. Place it in: macOS, **"/Applications/Ableton Live x.x.x.app/Contents/App-Resources/MIDI Remote Scripts/Launchkey\_MK2"** or Windows, **"C:\\Program Files\\Ableton\\Live x.x.x\\Resources\\MIDI Remote Scripts\\Launchkey\_MK2"**
 3. Remove existing **"DeviceComponent.pyc"**
 4. Run Live
