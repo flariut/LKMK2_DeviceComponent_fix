@@ -1,6 +1,6 @@
 # Launchkey 25, 49, 61 MK2 - Device Parameter Banks not available for VST/Plugins FIX
 
-On Ableton Live you can't select any Device Parameter Bank other than the first with third party plugins, and the root of this issue is a bug in Launchkey MK2's MIDI Remote Script. The bug is annoying because the pink lights of the banks glow as available, but you just can't select them, and if you wan't to manually tweak, for example, various Synth parameters, you simply can't more than 8.
+With Novation's Launchkey MK2 and InControl enabled on Ableton Live for device parameter modification, there is an issue where you can't select any Device Parameter Bank other than the first with third party plugins, and the root of this is a bug in Launchkey MK2's MIDI Remote Script. The bug is annoying because the pink lights of the banks glow as available, but you just can't select them, and if you wan't to manually tweak, for example, various Synth parameters, you simply can't more than 8.
 
 After contacting Novation a few months ago and not getting a definitive answer from their end, and taking advantage of the free time offered by the quarantine due to COVID-19, I decided to take action on the matter.
 
