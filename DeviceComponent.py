@@ -1,9 +1,9 @@
-# uncompyle6 version 3.6.4
+# uncompyle6 version 3.6.5
 # Python bytecode 2.7 (62211)
-# Decompiled from: Python 2.7.17 (default, Nov  7 2019, 10:07:09)
-# [GCC 7.4.0]
+# Decompiled from: Python 3.8.2 (default, Apr  8 2020, 14:31:25) 
+# [GCC 9.3.0]
 # Embedded file name: /Applications/Ableton Live 10 Suite.app/Contents/App-Resources/MIDI Remote Scripts/Launchkey_MK2/DeviceComponent.py
-# Compiled at: 2020-04-18 08:28:38
+# Compiled at: 2020-04-18 03:28:38
 from __future__ import absolute_import, print_function, unicode_literals
 import Live
 from _Generic.Devices import DEVICE_DICT, BANK_NAME_DICT, DEVICE_BOB_DICT, parameter_banks, parameter_bank_names
@@ -77,10 +77,8 @@ class DeviceComponent(DeviceComponentBase):
                     value_to_send = False
                     if index == self._bank_index and self._device:
                         value_to_send = b'Device.BankSelected'
-                    else:
-                        if index == 0:
-                            value_to_send = b'Device.BestOfBank'
-                        else:
-                            if index in xrange(bank_length):
-                                value_to_send = b'Device.Bank'
+                    elif index == 0:
+                        value_to_send = b'Device.BestOfBank'
+                    elif index in xrange(bank_length):
+                        value_to_send = b'Device.Bank'
                     button.set_light(value_to_send)
