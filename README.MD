@@ -4,7 +4,7 @@ With Novation's Launchkey MK2 and InControl enabled on Ableton Live for device p
 
 After contacting Novation a few months ago and not getting a definitive answer from their end, and taking advantage of the free time offered by the quarantine due to COVID-19, I decided to take action on the matter.
 
-For you people that understand anything of Python and Ableton's MIDI Remote Scripts, this was the root of the issue: Line 64 of the file "DeviceComponent.py" (https://github.com/gluon/AbletonLive10.1_MIDIRemoteScripts/blob/master/Launchkey_MK2/DeviceComponent.py) created a kind of infinite loop by referencing the method "\_number\_of\_parameter\_banks" of the child class "DeviceComponent", but actually it had to do a reference to the method of parent class  "DeviceComponentBase". The problem wasn't crashing completely Live thanks to Python's maximum recursion depth RecursionError. By simply changing that line, the behavior of the Launchkey MK2 is as expected.
+For you people that understand anything of Python and Ableton's MIDI Remote Scripts, this was the root of the issue: Line 64 of the decompiled file "DeviceComponent.py" created a kind of infinite loop by referencing the method "\_number\_of\_parameter\_banks" of the child class "DeviceComponent", but actually it had to do a reference to the method of parent class  "DeviceComponentBase". The problem wasn't crashing completely Live thanks to Python's maximum recursion depth RecursionError. By simply changing that line, the behavior of the Launchkey MK2 is as expected.
 
 I will share the following steps for easily fixing the bug if it's a functionality you need.
 
